@@ -1,0 +1,25 @@
+<?php
+
+// query threads
+$query = "SELECT * " .
+		 "FROM proj1_thread " .
+		 "ORDER BY creation_date";
+		 
+$results = $db->query($query)
+	or die($db->error);
+
+while ($row = $results->fetch_array())
+{
+	extract($row);
+	echo "<a href='thread.php?id=1'>";
+  	echo $title;
+	echo "</a>";
+	echo "<br/>";
+	echo "<br/>";
+}
+	
+// free results
+$results->free();
+// close DB	
+$db->close();
+?>
