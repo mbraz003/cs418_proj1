@@ -31,7 +31,8 @@ $db->close();
 if ($row)
 {
 ?>
-	
+<html>
+</html>
 <?php
 }
 else // bad username/password
